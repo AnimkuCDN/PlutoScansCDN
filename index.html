@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlutoScans CDN - Free Manga & Webtoon CDN Storage</title>
+  <meta name="description"
+    content="High performance free WebP Manga Cover & Chapter CDN powered by PlutoScans API & GitHub Pages CDN.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo-group">
+        <div class="logo-icon" style="background: linear-gradient(135deg, #f472b6, #818cf8);"><i class="fa-solid fa-book-open"></i></div>
+        <div class="logo-text">
+          <h1>PlutoScans CDN</h1>
+          <p>Manga, Manhwa & Chapter Folder CDN Storage</p>
+        </div>
+      </div>
+      <div class="nav-badges">
+        <span class="badge success"><i class="fa-solid fa-circle-check"></i> WebP Optimized</span>
+        <span class="badge primary" id="badgeTotalCount"><i class="fa-solid fa-book-open"></i> 0 Komik</span>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>PlutoScans <span>Folder Hierarchy CDN</span></h2>
+      <p>Cover komik & gambar chapter dikompresi ke format WebP super ringan dalam hirarki folder rapi <code>cdn/pluto/comics/{judul_comic}/{chapter}/</code> via Custom Domain (cdn.plutoscans.my.id).</p>
+    </section>
+
+    <!-- Toolbar & Search -->
+    <div class="toolbar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Cari judul komik atau slug...">
+      </div>
+      <select id="typeFilter" class="filter-select">
+        <option value="">Semua Format</option>
+        <option value="Manhwa">Manhwa</option>
+        <option value="Manhua">Manhua</option>
+        <option value="Manga">Manga</option>
+      </select>
+      <button class="btn btn-secondary" onclick="reloadCatalog()">
+        <i class="fa-solid fa-rotate-right"></i> Refresh
+      </button>
+    </div>
+
+    <!-- Stats & Info Bar -->
+    <div class="stats-bar">
+      <span id="displayCountText">Menampilkan 0 komik</span>
+      <span id="lastUpdatedText"><i class="fa-solid fa-clock"></i> Terakhir diperbarui: -</span>
+    </div>
+
+    <!-- Gallery Grid -->
+    <main id="galleryGrid" class="gallery-grid">
+      <!-- Cards will be populated dynamically -->
+    </main>
+
+    <!-- Integration & API Endpoints Docs -->
+    <section class="docs-section">
+      <h3><i class="fa-solid fa-folder-tree"></i> Hirarki Folder & URL CDN PlutoScans</h3>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">
+        Setiap komik dan chapter tersimpan rapi dalam hirarki folder berikut pada domain <code>cdn.plutoscans.my.id</code>.
+      </p>
+
+      <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px; display: block;">JSON Catalog Endpoint:</label>
+      <div class="endpoint-box">
+        <span id="jsonEndpointUrl">https://cdn.plutoscans.my.id/cdn/data/pluto_catalog.json</span>
+        <button class="btn-copy btn-action-copy" data-copy="https://cdn.plutoscans.my.id/cdn/data/pluto_catalog.json" data-label="JSON Catalog URL" style="width: auto; padding: 6px 12px;">
+          <i class="fa-solid fa-copy"></i> Copy
+        </button>
+      </div>
+
+      <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px; display: block; margin-top: 16px;">Struktur Folder Cover Komik CDN:</label>
+      <div class="endpoint-box">
+        <span>https://cdn.plutoscans.my.id/cdn/pluto/comics/{judul_comic}/cover.webp</span>
+      </div>
+
+      <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px; display: block; margin-top: 16px;">Struktur Hirarki Folder Gambar Chapter CDN:</label>
+      <div class="endpoint-box">
+        <span>https://cdn.plutoscans.my.id/cdn/pluto/comics/{judul_comic}/chapter-{chapter_number}/{page_number}.webp</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Link disalin ke clipboard!</span>
+  </div>
+
+  <script src="pluto_app.js"></script>
+</body>
+</html>

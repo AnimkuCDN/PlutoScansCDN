@@ -1,0 +1,53 @@
+name: Auto Scrape Anime Thumbnails & Deploy CDN
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Menjalankan otomatis setiap hari jam 00:00 UTC
+  workflow_dispatch: # Mendukung pemicu manual dari tab Actions GitHub
+    inputs:
+      pages:
+        description: 'Jumlah halaman filter yang ingin di-scrape (0 = Semua Halaman)'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Scraper on GitHub Cloud Runner
+        run: |
+          PAGES="${{ github.event.inputs.pages || '0' }}"
+          python scraper.py \
+            --max-pages $PAGES \
+            --github-user "${{ github.repository_owner }}" \
+            --github-repo "${{ github.event.repository.name }}" \
+            --branch "${{ github.ref_name || 'main' }}"
+
+      - name: Commit and Push CDN updates
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add cdn/
+          if git diff --staged --quiet; then
+            echo "Tidak ada pembaruan thumbnail baru."
+          else
+            git commit -m "chore(cdn): auto scrape thumbnail anime baru & update metadata catalog [skip ci]"
+            git push
+          fi

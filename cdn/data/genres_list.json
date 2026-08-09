@@ -1,0 +1,313 @@
+{
+  "total_genres": 77,
+  "genres": [
+    {
+      "name": "Action",
+      "value": "action"
+    },
+    {
+      "name": "Adult Cast",
+      "value": "adult-cast"
+    },
+    {
+      "name": "Adventure",
+      "value": "adventure"
+    },
+    {
+      "name": "Anthropomorphic",
+      "value": "anthropomorphic"
+    },
+    {
+      "name": "Avant Garde",
+      "value": "avant-garde"
+    },
+    {
+      "name": "Boys Love",
+      "value": "boys-love"
+    },
+    {
+      "name": "CGDCT",
+      "value": "cgdct"
+    },
+    {
+      "name": "Childcare",
+      "value": "childcare"
+    },
+    {
+      "name": "Comedy",
+      "value": "comedy"
+    },
+    {
+      "name": "Crossdressing",
+      "value": "crossdressing"
+    },
+    {
+      "name": "Delinquents",
+      "value": "delinquents"
+    },
+    {
+      "name": "Detective",
+      "value": "detective"
+    },
+    {
+      "name": "Drama",
+      "value": "drama"
+    },
+    {
+      "name": "Ecchi",
+      "value": "ecchi"
+    },
+    {
+      "name": "Educational",
+      "value": "educational"
+    },
+    {
+      "name": "Erotica",
+      "value": "erotica"
+    },
+    {
+      "name": "Fantasy",
+      "value": "fantasy"
+    },
+    {
+      "name": "Gag Humor",
+      "value": "gag-humor"
+    },
+    {
+      "name": "Girls Love",
+      "value": "girls-love"
+    },
+    {
+      "name": "Gore",
+      "value": "gore"
+    },
+    {
+      "name": "Gourmet",
+      "value": "gourmet"
+    },
+    {
+      "name": "Harem",
+      "value": "harem"
+    },
+    {
+      "name": "Hentai",
+      "value": "hentai"
+    },
+    {
+      "name": "High Stakes Game",
+      "value": "high-stakes-game"
+    },
+    {
+      "name": "Historical",
+      "value": "historical"
+    },
+    {
+      "name": "Horror",
+      "value": "horror"
+    },
+    {
+      "name": "Idols (Female)",
+      "value": "idols-female"
+    },
+    {
+      "name": "Idols (Male)",
+      "value": "idols-male"
+    },
+    {
+      "name": "Isekai",
+      "value": "isekai"
+    },
+    {
+      "name": "Iyashikei",
+      "value": "iyashikei"
+    },
+    {
+      "name": "Josei",
+      "value": "josei"
+    },
+    {
+      "name": "Kids",
+      "value": "kids"
+    },
+    {
+      "name": "Love Polygon",
+      "value": "love-polygon"
+    },
+    {
+      "name": "Love Status Quo",
+      "value": "love-status-quo"
+    },
+    {
+      "name": "Magical Sex Shift",
+      "value": "magical-sex-shift"
+    },
+    {
+      "name": "Mahou Shoujo",
+      "value": "mahou-shoujo"
+    },
+    {
+      "name": "Martial Arts",
+      "value": "martial-arts"
+    },
+    {
+      "name": "Mecha",
+      "value": "mecha"
+    },
+    {
+      "name": "Medical",
+      "value": "medical"
+    },
+    {
+      "name": "Military",
+      "value": "military"
+    },
+    {
+      "name": "Music",
+      "value": "music"
+    },
+    {
+      "name": "Mystery",
+      "value": "mystery"
+    },
+    {
+      "name": "Mythology",
+      "value": "mythology"
+    },
+    {
+      "name": "Organized Crime",
+      "value": "organized-crime"
+    },
+    {
+      "name": "Otaku Culture",
+      "value": "otaku-culture"
+    },
+    {
+      "name": "Parody",
+      "value": "parody"
+    },
+    {
+      "name": "Performing Arts",
+      "value": "performing-arts"
+    },
+    {
+      "name": "Pets",
+      "value": "pets"
+    },
+    {
+      "name": "Psychological",
+      "value": "psychological"
+    },
+    {
+      "name": "Racing",
+      "value": "racing"
+    },
+    {
+      "name": "Reincarnation",
+      "value": "reincarnation"
+    },
+    {
+      "name": "Reverse Harem",
+      "value": "reverse-harem"
+    },
+    {
+      "name": "Romance",
+      "value": "romance"
+    },
+    {
+      "name": "Romantic Subtext",
+      "value": "romantic-subtext"
+    },
+    {
+      "name": "Samurai",
+      "value": "samurai"
+    },
+    {
+      "name": "School",
+      "value": "school"
+    },
+    {
+      "name": "Sci-Fi",
+      "value": "sci-fi"
+    },
+    {
+      "name": "Seinen",
+      "value": "seinen"
+    },
+    {
+      "name": "Shoujo",
+      "value": "shoujo"
+    },
+    {
+      "name": "Shounen",
+      "value": "shounen"
+    },
+    {
+      "name": "Showbiz",
+      "value": "showbiz"
+    },
+    {
+      "name": "Slice of Life",
+      "value": "slice-of-life"
+    },
+    {
+      "name": "Space",
+      "value": "space"
+    },
+    {
+      "name": "Sports",
+      "value": "sports"
+    },
+    {
+      "name": "Strategy Game",
+      "value": "strategy-game"
+    },
+    {
+      "name": "Super Power",
+      "value": "super-power"
+    },
+    {
+      "name": "Supernatural",
+      "value": "supernatural"
+    },
+    {
+      "name": "Survival",
+      "value": "survival"
+    },
+    {
+      "name": "Suspense",
+      "value": "suspense"
+    },
+    {
+      "name": "Team Sports",
+      "value": "team-sports"
+    },
+    {
+      "name": "Time Travel",
+      "value": "time-travel"
+    },
+    {
+      "name": "Urban Fantasy",
+      "value": "urban-fantasy"
+    },
+    {
+      "name": "Vampire",
+      "value": "vampire"
+    },
+    {
+      "name": "Video Game",
+      "value": "video-game"
+    },
+    {
+      "name": "Villainess",
+      "value": "villainess"
+    },
+    {
+      "name": "Visual Arts",
+      "value": "visual-arts"
+    },
+    {
+      "name": "Workplace",
+      "value": "workplace"
+    }
+  ]
+}
