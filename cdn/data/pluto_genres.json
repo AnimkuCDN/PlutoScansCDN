@@ -1,5 +1,5 @@
 {
-  "total_genres": 50,
+  "total_genres": 51,
   "genres": [
     {
       "taxonomy_id": 25,
@@ -83,6 +83,12 @@
       "taxonomy_id": 1385,
       "slug": "fight",
       "name": "Fight",
+      "type": "Genre"
+    },
+    {
+      "taxonomy_id": 3265,
+      "slug": "fighting-genre",
+      "name": "Fighting",
       "type": "Genre"
     },
     {
